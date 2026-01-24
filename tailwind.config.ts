@@ -90,7 +90,24 @@ export default {
         },
         "float": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px hsl(220 90% 60% / 0.3), 0 0 40px hsl(320 80% 55% / 0.15)",
+          },
+          "50%": { 
+            boxShadow: "0 0 40px hsl(220 90% 60% / 0.5), 0 0 80px hsl(320 80% 55% / 0.3)",
+          },
+        },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
         },
       },
       animation: {
@@ -100,13 +117,18 @@ export default {
         "fade-up": "fade-up 0.6s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
         "float": "float 6s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 8s ease infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "spin-slow": "spin-slow 20s linear infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-subtle': 'linear-gradient(135deg, hsl(220 15% 11%) 0%, hsl(220 15% 8%) 100%)',
-        'gradient-card': 'linear-gradient(180deg, hsl(220 15% 13%) 0%, hsl(220 15% 10%) 100%)',
-        'glow-primary': 'radial-gradient(600px circle, hsl(210 60% 50% / 0.15), transparent 40%)',
-        'glow-accent': 'radial-gradient(600px circle, hsl(185 45% 45% / 0.1), transparent 40%)',
+        'gradient-primary': 'linear-gradient(135deg, hsl(220 90% 60%) 0%, hsl(320 80% 55%) 100%)',
+        'gradient-glow': 'linear-gradient(135deg, hsl(220 90% 60% / 0.15) 0%, hsl(320 80% 55% / 0.15) 100%)',
+        'gradient-subtle': 'linear-gradient(135deg, hsl(225 20% 9%) 0%, hsl(225 20% 6%) 100%)',
+        'gradient-card': 'linear-gradient(180deg, hsl(225 20% 11%) 0%, hsl(225 20% 8%) 100%)',
+        'glow-primary': 'radial-gradient(600px circle, hsl(220 90% 60% / 0.15), hsl(320 80% 55% / 0.1), transparent 40%)',
+        'glow-accent': 'radial-gradient(600px circle, hsl(280 75% 60% / 0.1), transparent 40%)',
       },
     },
   },

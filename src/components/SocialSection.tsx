@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Github, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Github, Linkedin, Facebook, Instagram, Youtube, Link2 } from 'lucide-react';
 
 interface SocialLink {
   name: string;
   url: string;
   icon: React.ElementType;
   username: string;
+  color: string;
 }
 
 // Custom Telegram icon
@@ -33,14 +34,14 @@ const BitbucketIcon = ({ size = 24, className = '' }: { size?: number; className
 );
 
 const socialLinks: SocialLink[] = [
-  { name: 'GitHub', url: 'https://github.com/CodeWithRafsun', icon: Github, username: '@CodeWithRafsun' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/codewithrafsun', icon: Linkedin, username: '@codewithrafsun' },
-  { name: 'Facebook', url: 'https://facebook.com/codewithrafsun', icon: Facebook, username: '@codewithrafsun' },
-  { name: 'Instagram', url: 'https://instagram.com/codewithrafsun', icon: Instagram, username: '@codewithrafsun' },
-  { name: 'Telegram', url: 'https://t.me/codewithrafsun', icon: TelegramIcon, username: '@codewithrafsun' },
-  { name: 'YouTube', url: 'https://youtube.com/@codewithrafsun', icon: Youtube, username: '@codewithrafsun' },
-  { name: 'TikTok', url: 'https://tiktok.com/@codewithrafsun', icon: TikTokIcon, username: '@codewithrafsun' },
-  { name: 'Bitbucket', url: 'https://bitbucket.org/codewithrafsun', icon: BitbucketIcon, username: '@codewithrafsun' },
+  { name: 'GitHub', url: 'https://github.com/CodeWithRafsun', icon: Github, username: '@CodeWithRafsun', color: 'group-hover:text-foreground' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/codewithrafsun', icon: Linkedin, username: '@codewithrafsun', color: 'group-hover:text-primary' },
+  { name: 'Facebook', url: 'https://facebook.com/codewithrafsun', icon: Facebook, username: '@codewithrafsun', color: 'group-hover:text-primary' },
+  { name: 'Instagram', url: 'https://instagram.com/codewithrafsun', icon: Instagram, username: '@codewithrafsun', color: 'group-hover:text-secondary' },
+  { name: 'Telegram', url: 'https://t.me/codewithrafsun', icon: TelegramIcon, username: '@codewithrafsun', color: 'group-hover:text-primary' },
+  { name: 'YouTube', url: 'https://youtube.com/@codewithrafsun', icon: Youtube, username: '@codewithrafsun', color: 'group-hover:text-secondary' },
+  { name: 'TikTok', url: 'https://tiktok.com/@codewithrafsun', icon: TikTokIcon, username: '@codewithrafsun', color: 'group-hover:text-foreground' },
+  { name: 'Bitbucket', url: 'https://bitbucket.org/codewithrafsun', icon: BitbucketIcon, username: '@codewithrafsun', color: 'group-hover:text-primary' },
 ];
 
 export const SocialSection = () => {
@@ -48,21 +49,40 @@ export const SocialSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="section-padding relative">
-      <div className="section-container" ref={ref}>
+    <section className="section-padding relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `radial-gradient(hsl(320 80% 55%) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}
+      />
+      
+      <div className="section-container relative" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           {/* Section Header */}
           <div className="mb-12 text-center">
-            <span className="font-mono text-sm text-primary mb-2 block">// Connect</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Professional Presence</h2>
-            <p className="text-muted-foreground mt-3">
+            <motion.span 
+              className="inline-flex items-center gap-2 font-mono text-sm text-primary mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.2 }}
+            >
+              <Link2 size={14} />
+              // Connect
+            </motion.span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <span className="text-foreground">Professional </span>
+              <span className="text-gradient-primary">Presence</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
               Unified branding across all platforms as{' '}
-              <span className="font-mono text-primary">@codewithrafsun</span>
+              <span className="font-mono text-gradient-primary font-semibold">@codewithrafsun</span>
             </p>
           </div>
 
@@ -74,16 +94,23 @@ export const SocialSection = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group flex items-center gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
+                className="group relative flex items-center gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden"
+                whileHover={{ y: -3, scale: 1.02 }}
               >
-                <div className="p-2 rounded-lg bg-muted group-hover:bg-primary/10 transition-colors">
-                  <link.icon size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium text-foreground truncate">{link.name}</p>
+                {/* Hover gradient */}
+                <div className="absolute inset-0 bg-gradient-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <motion.div 
+                  className="relative p-2.5 rounded-xl bg-muted group-hover:bg-gradient-primary transition-all duration-300"
+                  whileHover={{ rotate: 5 }}
+                >
+                  <link.icon size={18} className={`text-muted-foreground ${link.color} transition-colors duration-300`} />
+                </motion.div>
+                <div className="relative min-w-0 flex-1">
+                  <p className="text-sm font-semibold text-foreground truncate">{link.name}</p>
                   <p className="text-xs text-muted-foreground font-mono truncate">{link.username}</p>
                 </div>
               </motion.a>
