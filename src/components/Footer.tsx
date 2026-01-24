@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
+import { Heart } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 border-t border-border">
-      <div className="section-container">
+    <footer className="py-10 border-t border-border relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-glow opacity-20" />
+      
+      <div className="section-container relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -15,11 +18,11 @@ export const Footer = () => {
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>© {currentYear}</span>
             <span className="text-border">•</span>
-            <span className="font-mono text-primary">@codewithrafsun</span>
+            <span className="font-mono text-gradient-primary font-semibold">@codewithrafsun</span>
           </div>
 
-          <p className="text-sm text-muted-foreground text-center md:text-right">
-            Built with passion. Designed for the future.
+          <p className="text-sm text-muted-foreground text-center md:text-right flex items-center gap-2">
+            Built with <Heart size={14} className="text-secondary fill-secondary" /> for the future.
           </p>
         </motion.div>
       </div>

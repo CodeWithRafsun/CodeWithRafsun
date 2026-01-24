@@ -33,7 +33,7 @@ export const Navigation = () => {
     >
       <nav className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="font-mono text-sm font-medium text-primary hover:text-accent transition-colors">
+          <a href="#" className="font-mono text-sm font-semibold text-gradient-primary hover:opacity-80 transition-opacity">
             @codewithrafsun
           </a>
 
