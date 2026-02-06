@@ -1,194 +1,168 @@
-import { motion } from 'framer-motion';
-import { Github, ArrowDown, Mail, Sparkles } from 'lucide-react';
-import profileImage from '@/assets/profile.jpg';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+// Tech-themed images for the hero slider
+const heroImages = [
+  {
+    url: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1920&q=80',
+    alt: 'Code on screen'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80',
+    alt: 'AI and Machine Learning'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1920&q=80',
+    alt: 'Cybersecurity Matrix'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80',
+    alt: 'Circuit Board Technology'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1920&q=80',
+    alt: 'Terminal Command Line'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80',
+    alt: 'Data Center Networks'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80',
+    alt: 'Global Data Networks'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80',
+    alt: 'Cybersecurity Lock'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80',
+    alt: 'AI Robot Face'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80',
+    alt: 'Code Development'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1920&q=80',
+    alt: 'Automation and Robotics'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80',
+    alt: 'Network Infrastructure'
+  },
+];
 
 export const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Gradient orbs */}
-        <motion.div 
-          className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full blur-[120px] opacity-40"
-          style={{ background: 'linear-gradient(135deg, hsl(220 90% 60% / 0.4) 0%, hsl(280 75% 60% / 0.2) 100%)' }}
-          animate={{ 
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full blur-[120px] opacity-40"
-          style={{ background: 'linear-gradient(135deg, hsl(320 80% 55% / 0.4) 0%, hsl(220 90% 60% / 0.2) 100%)' }}
-          animate={{ 
-            x: [0, -50, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.15, 1]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        />
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-[0.02]" 
-          style={{ 
-            backgroundImage: 'linear-gradient(hsl(220 90% 60%) 1px, transparent 1px), linear-gradient(90deg, hsl(220 90% 60%) 1px, transparent 1px)',
-            backgroundSize: '60px 60px'
-          }} 
-        />
-      </div>
-
-      <div className="section-container relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
-            className="relative"
-          >
-            <div className="relative w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80">
-              {/* Animated ring */}
-              <motion.div 
-                className="absolute -inset-4 rounded-full"
-                style={{ 
-                  background: 'linear-gradient(135deg, hsl(220 90% 60%) 0%, hsl(320 80% 55%) 50%, hsl(280 75% 60%) 100%)',
-                  padding: '3px'
-                }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              >
-                <div className="w-full h-full rounded-full bg-background" />
-              </motion.div>
-              
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 rounded-full animate-pulse-glow" />
-              
-              <img
-                src={profileImage}
-                alt="Mahedi Hasan Rafsun"
-                className="relative w-full h-full object-cover rounded-full border-2 border-border shadow-2xl z-10"
-              />
-              
-              {/* Status indicator */}
-              <motion.div 
-                className="absolute -bottom-1 -right-1 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-border"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1, type: "spring" }}
-              >
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-xs font-medium text-foreground">Available</span>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Hero Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <motion.span 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border font-mono text-sm text-primary mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <Sparkles size={14} className="text-secondary" />
-                Hello, I'm
-              </motion.span>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-tight">
-                <span className="text-foreground">Mahedi Hasan</span>{' '}
-                <span className="text-gradient-primary">Rafsun</span>
-              </h1>
-              
-              <motion.div 
-                className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-base md:text-lg text-muted-foreground mb-6"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-              >
-                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  Student Developer
-                </span>
-                <span className="text-border">•</span>
-                <span className="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-medium">
-                  AI & Automation
-                </span>
-                <span className="text-border">•</span>
-                <span className="font-mono text-accent">@codewithrafsun</span>
-              </motion.div>
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
-            >
-              I build <span className="text-primary font-medium">AI-powered tools</span>, 
-              automation systems, and developer solutions with a{' '}
-              <span className="text-secondary font-medium">long-term vision</span>.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start"
-            >
-              <a
-                href="#projects"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-primary text-primary-foreground rounded-xl font-medium transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
-              >
-                View Projects
-                <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform" />
-              </a>
-              <a
-                href="https://github.com/CodeWithRafsun"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-card text-foreground rounded-xl font-medium transition-all border border-border hover:border-primary/50 hover:bg-muted hover:-translate-y-0.5"
-              >
-                <Github size={18} />
-                GitHub
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent text-foreground rounded-xl font-medium transition-all border border-border hover:border-secondary/50 hover:bg-secondary/5 hover:-translate-y-0.5"
-              >
-                <Mail size={18} />
-                Contact
-              </a>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
+    <section 
+      className="relative h-screen w-full overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* Image Slider */}
+      <AnimatePresence mode="wait">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          key={currentIndex}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute inset-0"
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2"
-          >
-            <span className="text-xs text-muted-foreground font-mono">Scroll</span>
-            <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-1">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1.5 h-3 bg-gradient-primary rounded-full"
-              />
-            </div>
-          </motion.div>
+          <img
+            src={heroImages[currentIndex].url}
+            alt={heroImages[currentIndex].alt}
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for consistency */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
         </motion.div>
+      </AnimatePresence>
+
+      {/* Animated gradient overlay */}
+      <motion.div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(135deg, hsl(220 90% 60% / 0.1) 0%, transparent 50%, hsl(320 80% 55% / 0.1) 100%)'
+        }}
+        animate={{ opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-card/80 backdrop-blur-sm border border-border hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 group"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft size={24} className="text-foreground group-hover:text-primary transition-colors" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-card/80 backdrop-blur-sm border border-border hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 group"
+        aria-label="Next slide"
+      >
+        <ChevronRight size={24} className="text-foreground group-hover:text-primary transition-colors" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'w-8 bg-gradient-primary' 
+                : 'bg-foreground/30 hover:bg-foreground/50'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="flex flex-col items-center gap-2"
+        >
+          <span className="text-xs text-foreground/60 font-mono">Scroll</span>
+          <div className="w-5 h-8 border-2 border-foreground/30 rounded-full flex justify-center pt-1">
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-1 h-2 bg-primary rounded-full"
+            />
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

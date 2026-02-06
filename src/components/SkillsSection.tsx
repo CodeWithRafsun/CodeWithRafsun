@@ -1,32 +1,57 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code, Layers, Rocket } from 'lucide-react';
+import { Code, Layers, Brain, MessageSquare, Globe, Sparkles } from 'lucide-react';
+
+interface Skill {
+  name: string;
+  level: number;
+}
 
 interface SkillCategory {
   title: string;
   icon: React.ElementType;
-  items: string[];
+  skills: Skill[];
   accentColor: string;
 }
 
 const skillCategories: SkillCategory[] = [
   {
-    title: 'Core Skills',
+    title: 'Technical Skills',
     icon: Code,
-    items: ['Programming', 'Web Development', 'Prompt Engineering', 'Cybersecurity Awareness'],
+    skills: [
+      { name: 'Web Development (Frontend & Backend)', level: 85 },
+      { name: 'AI Tool Integration', level: 80 },
+      { name: 'API Handling', level: 75 },
+      { name: 'Supabase / Firebase', level: 80 },
+      { name: 'Automation Systems', level: 75 },
+      { name: 'Cybersecurity Fundamentals', level: 70 },
+      { name: 'Linux (Kali, Ubuntu)', level: 75 },
+      { name: 'Git & Version Control', level: 85 },
+      { name: 'Prompt Engineering', level: 90 },
+    ],
     accentColor: 'primary',
   },
   {
-    title: 'Platforms & Tools',
-    icon: Layers,
-    items: ['Supabase', 'Vercel', 'GitHub', 'Lovable', 'CLI-based Tooling'],
+    title: 'Soft Skills',
+    icon: Brain,
+    skills: [
+      { name: 'Problem Solving', level: 90 },
+      { name: 'Analytical Thinking', level: 85 },
+      { name: 'Self-Learning', level: 95 },
+      { name: 'Research Ability', level: 85 },
+      { name: 'Time Management', level: 80 },
+      { name: 'Communication', level: 75 },
+    ],
     accentColor: 'secondary',
   },
   {
-    title: 'Focus Areas',
-    icon: Rocket,
-    items: ['AI-powered Applications', 'Automation Systems', 'Developer Productivity Tools', 'Research & Learning'],
+    title: 'Language Skills',
+    icon: Globe,
+    skills: [
+      { name: 'Bangla (Native)', level: 100 },
+      { name: 'English (Professional)', level: 80 },
+    ],
     accentColor: 'accent',
   },
 ];
@@ -67,17 +92,17 @@ export const SkillsSection = () => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.2 }}
             >
-              <Code size={14} />
+              <Sparkles size={14} />
               // Skills
             </motion.span>
             <h2 className="text-3xl md:text-5xl font-bold">
               <span className="text-foreground">Expertise & </span>
-              <span className="text-gradient-primary">Tools</span>
+              <span className="text-gradient-primary">Abilities</span>
             </h2>
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}
@@ -98,29 +123,36 @@ export const SkillsSection = () => {
                   >
                     <category.icon size={20} className={`text-${category.accentColor}`} />
                   </motion.div>
-                  <h3 className="font-mono text-sm text-foreground font-medium">
+                  <h3 className="font-semibold text-foreground">
                     {category.title}
                   </h3>
                 </div>
                 
-                {/* Skills list */}
-                <ul className="space-y-3">
-                  {category.items.map((skill, skillIndex) => (
-                    <motion.li
-                      key={skill}
+                {/* Skills list with progress */}
+                <div className="space-y-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill.name}
                       initial={{ opacity: 0, x: -10 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ duration: 0.3, delay: categoryIndex * 0.15 + skillIndex * 0.05 }}
-                      className="group/item flex items-center gap-3 text-muted-foreground hover:text-foreground transition-all duration-300 cursor-default"
+                      className="space-y-2"
                     >
-                      <motion.span 
-                        className="w-2 h-2 rounded-full bg-gradient-primary"
-                        whileHover={{ scale: 1.5 }}
-                      />
-                      <span className="text-sm group-hover/item:translate-x-1 transition-transform duration-300">{skill}</span>
-                    </motion.li>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">{skill.name}</span>
+                        <span className="text-xs font-mono text-primary">{skill.level}%</span>
+                      </div>
+                      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={isInView ? { width: `${skill.level}%` } : {}}
+                          transition={{ duration: 1, delay: categoryIndex * 0.15 + skillIndex * 0.1, ease: "easeOut" }}
+                          className="h-full bg-gradient-primary rounded-full"
+                        />
+                      </div>
+                    </motion.div>
                   ))}
-                </ul>
+                </div>
               </motion.div>
             ))}
           </div>

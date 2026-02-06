@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GraduationCap, Award, BookOpen, Sparkles } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, Sparkles, Code, Brain, Shield } from 'lucide-react';
 
 interface EducationItem {
   level: string;
@@ -13,21 +13,22 @@ interface EducationItem {
 
 const education: EducationItem[] = [
   {
-    level: 'Primary School',
-    school: 'Bormi Union Government Primary School',
-    result: 'PSC Result: 4.89 / 5.00',
+    level: 'SSC',
+    school: 'Bormi Union High School, Bangladesh',
+    result: 'Completed',
   },
   {
-    level: 'High School',
-    school: 'Bormi Union High School',
-    result: 'SSC Result: 4.11 / 5.00',
-  },
-  {
-    level: 'College',
-    school: 'Sreepur Government College',
-    status: '1st Year — Science Department',
+    level: 'Diploma / Engineering Path',
+    school: 'Currently Pursuing',
+    status: 'Running / Planned',
     current: true,
   },
+];
+
+const selfTaughtAreas = [
+  { icon: Code, label: 'Web Development', description: 'Frontend & Backend' },
+  { icon: Brain, label: 'AI & Automation', description: 'Tools & Integration' },
+  { icon: Shield, label: 'Cybersecurity', description: 'Fundamentals & Awareness' },
 ];
 
 export const EducationSection = () => {
@@ -49,7 +50,7 @@ export const EducationSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           {/* Section Header */}
           <div className="mb-16 text-center">
@@ -68,95 +69,102 @@ export const EducationSection = () => {
             </h2>
           </div>
 
-          {/* Timeline */}
-          <div className="relative">
-            {/* Animated Vertical Line */}
-            <motion.div 
-              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-px"
-              style={{ background: 'linear-gradient(180deg, hsl(220 90% 60%) 0%, hsl(320 80% 55%) 100%)' }}
-              initial={{ height: 0 }}
-              animate={isInView ? { height: '100%' } : {}}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-            />
-
-            <div className="space-y-10">
-              {education.map((item, index) => (
-                <motion.div
-                  key={item.level}
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
-                  className={`relative flex items-start gap-6 md:gap-8 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  {/* Timeline Dot */}
+          {/* Formal Education */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {education.map((item, index) => (
+              <motion.div
+                key={item.level}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                className={`group bg-card rounded-2xl p-6 border transition-all duration-500 hover-glow ${
+                  item.current 
+                    ? 'border-secondary/50 hover:border-secondary' 
+                    : 'border-border hover:border-primary/50'
+                }`}
+              >
+                {item.current && (
                   <motion.div 
-                    className="absolute left-4 md:left-1/2 -translate-x-1.5 md:-translate-x-1.5 mt-6"
-                    initial={{ scale: 0 }}
-                    animate={isInView ? { scale: 1 } : {}}
-                    transition={{ delay: 0.5 + index * 0.2, type: "spring" }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-primary text-primary-foreground text-xs font-mono mb-4"
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
                   >
-                    <div className="w-4 h-4 rounded-full bg-gradient-primary animate-pulse-glow" />
+                    <Sparkles size={12} />
+                    Currently Pursuing
                   </motion.div>
+                )}
+                
+                <div className="flex items-start gap-4 mb-4">
+                  <motion.div 
+                    className={`p-3 rounded-xl ${
+                      item.current 
+                        ? 'bg-gradient-primary' 
+                        : 'bg-muted border border-border group-hover:bg-gradient-glow'
+                    } transition-all duration-300`}
+                    whileHover={{ rotate: 5, scale: 1.1 }}
+                  >
+                    {item.current ? (
+                      <GraduationCap size={22} className="text-primary-foreground" />
+                    ) : (
+                      <Award size={22} className="text-primary" />
+                    )}
+                  </motion.div>
+                  <div>
+                    <h3 className="font-bold text-lg text-foreground">{item.level}</h3>
+                    <p className="text-muted-foreground text-sm">{item.school}</p>
+                  </div>
+                </div>
+                
+                {item.result && (
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 border border-border">
+                    <span className="text-sm font-mono text-primary font-semibold">{item.result}</span>
+                  </div>
+                )}
+                {item.status && (
+                  <p className="text-sm text-secondary font-medium">{item.status}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
 
-                  {/* Content Card */}
-                  <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <motion.div 
-                      className={`group bg-card rounded-2xl p-6 border transition-all duration-500 hover-glow ${
-                        item.current 
-                          ? 'border-secondary/50 hover:border-secondary' 
-                          : 'border-border hover:border-primary/50'
-                      }`}
-                      whileHover={{ y: -5, scale: 1.02 }}
-                    >
-                      {/* Current badge */}
-                      {item.current && (
-                        <motion.div 
-                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-primary text-primary-foreground text-xs font-mono mb-4"
-                          animate={{ scale: [1, 1.05, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        >
-                          <Sparkles size={12} />
-                          Currently Studying
-                        </motion.div>
-                      )}
-                      
-                      <div className="flex items-start gap-4 mb-4">
-                        <motion.div 
-                          className={`p-3 rounded-xl ${
-                            item.current 
-                              ? 'bg-gradient-primary' 
-                              : 'bg-muted border border-border group-hover:bg-gradient-glow'
-                          } transition-all duration-300`}
-                          whileHover={{ rotate: 5, scale: 1.1 }}
-                        >
-                          {item.current ? (
-                            <GraduationCap size={22} className="text-primary-foreground" />
-                          ) : (
-                            <Award size={22} className="text-primary" />
-                          )}
-                        </motion.div>
-                        <div>
-                          <h3 className="font-bold text-lg text-foreground">{item.level}</h3>
-                          <p className="text-muted-foreground text-sm">{item.school}</p>
-                        </div>
-                      </div>
-                      
-                      {item.result && (
-                        <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 border border-border">
-                          <span className="text-sm font-mono text-gradient-primary font-semibold">{item.result}</span>
-                        </div>
-                      )}
-                      {item.status && (
-                        <p className="text-sm text-secondary font-medium">{item.status}</p>
-                      )}
-                    </motion.div>
+          {/* Self-Taught Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="bg-card rounded-2xl p-8 border border-border hover-glow"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20">
+                <BookOpen size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg text-foreground">Self-Taught Learning</h3>
+                <p className="text-sm text-muted-foreground">Open-source & online platforms</p>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4">
+              {selfTaughtAreas.map((area, index) => (
+                <motion.div
+                  key={area.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                  className="group flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border hover:border-primary/30 transition-all duration-300"
+                  whileHover={{ x: 5 }}
+                >
+                  <div className="p-2.5 rounded-xl bg-card border border-border group-hover:bg-gradient-glow transition-colors">
+                    <area.icon size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{area.label}</p>
+                    <p className="text-xs text-muted-foreground">{area.description}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
