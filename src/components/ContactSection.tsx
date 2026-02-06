@@ -49,7 +49,7 @@ export const ContactSection = () => {
               <span className="text-gradient-primary">Touch</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-lg mx-auto">
-              Open to learning, collaboration, and future opportunities.
+              Let's build something intelligent together.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Location</h3>
                     <p className="text-muted-foreground text-sm">
-                      Gazipur, Dhaka, Bangladesh
+                      Bangladesh
                     </p>
                   </div>
                 </div>
@@ -112,8 +112,8 @@ export const ContactSection = () => {
                 className="p-6 rounded-2xl bg-gradient-glow border border-border"
               >
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Whether you have a project idea, want to collaborate, or just want to say hello — 
-                  I'd love to hear from you. I typically respond within{' '}
+                  Open to learning, collaboration, and future opportunities. 
+                  I typically respond within{' '}
                   <span className="text-primary font-medium">24-48 hours</span>.
                 </p>
               </motion.div>

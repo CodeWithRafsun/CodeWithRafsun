@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Lightbulb, Code, Shield, HelpCircle, Sparkles, GraduationCap, ArrowRight } from 'lucide-react';
+import { Lightbulb, Code, Shield, HelpCircle, Sparkles, GraduationCap, ArrowRight, Mail } from 'lucide-react';
 
 const focusAreas = [
-  { icon: Sparkles, label: 'AI-powered Tools Exploration', color: 'text-primary' },
-  { icon: Code, label: 'Development Tips & Tricks', color: 'text-secondary' },
-  { icon: Shield, label: 'Cybersecurity Awareness', color: 'text-accent' },
-  { icon: HelpCircle, label: 'Problem-solving Help', color: 'text-primary' },
-  { icon: Lightbulb, label: 'Motivational Learning', color: 'text-secondary' },
+  { icon: Sparkles, label: 'Teaching AI Tools', description: 'Practical exploration & usage' },
+  { icon: Code, label: 'Development Tips', description: 'Tricks & best practices' },
+  { icon: Shield, label: 'Cybersecurity Awareness', description: 'Security fundamentals' },
+  { icon: Lightbulb, label: 'Practical Learning', description: 'Hands-on approach' },
 ];
 
 export const InitiativeSection = () => {
@@ -16,7 +15,7 @@ export const InitiativeSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section id="organization" className="section-padding relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-glow opacity-50" />
       
@@ -68,14 +67,22 @@ export const InitiativeSection = () => {
               </div>
 
               {/* Description */}
-              <p className="text-muted-foreground mb-10 max-w-2xl text-lg leading-relaxed">
-                An educational initiative focused on sharing knowledge, exploring AI-powered tools, 
-                and helping others on their development journey. Not a hobby project — a{' '}
-                <span className="text-primary font-medium">growing educational platform</span>.
+              <p className="text-muted-foreground mb-8 max-w-2xl text-lg leading-relaxed">
+                An educational and motivational initiative dedicated to sharing knowledge, 
+                exploring AI-powered tools, and helping others on their development journey.
               </p>
 
+              {/* Mission */}
+              <div className="p-5 rounded-xl bg-muted/50 border border-border mb-10">
+                <h3 className="font-semibold text-foreground mb-2">Our Mission</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  To provide practical, accessible education in AI tools, development best practices, 
+                  and cybersecurity awareness. We believe in learning by doing and sharing knowledge openly.
+                </p>
+              </div>
+
               {/* Focus Areas */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4 mb-10">
                 {focusAreas.map((area, index) => (
                   <motion.div
                     key={area.label}
@@ -86,12 +93,26 @@ export const InitiativeSection = () => {
                     whileHover={{ x: 5 }}
                   >
                     <div className="p-2.5 rounded-xl bg-card border border-border group-hover:bg-gradient-glow transition-colors">
-                      <area.icon size={18} className={area.color} />
+                      <area.icon size={18} className="text-primary" />
                     </div>
-                    <span className="text-sm text-foreground font-medium">{area.label}</span>
-                    <ArrowRight size={14} className="text-muted-foreground ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-foreground">{area.label}</p>
+                      <p className="text-xs text-muted-foreground">{area.description}</p>
+                    </div>
+                    <ArrowRight size={14} className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                   </motion.div>
                 ))}
+              </div>
+
+              {/* Contact / Collaboration */}
+              <div className="flex flex-col sm:flex-row items-center gap-4 p-5 rounded-xl bg-gradient-glow border border-border">
+                <Mail size={20} className="text-primary" />
+                <p className="text-sm text-foreground text-center sm:text-left">
+                  Interested in collaboration or have questions?{' '}
+                  <a href="#contact" className="text-primary font-medium hover:underline">
+                    Get in touch
+                  </a>
+                </p>
               </div>
             </div>
           </motion.div>
