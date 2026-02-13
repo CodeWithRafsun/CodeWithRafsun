@@ -1,73 +1,150 @@
-# Welcome to your Lovable project
+<!-- =============================== -->
+<!--        PROFILE HEADER           -->
+<!-- =============================== -->
 
-## Project info
+<h1 align="center">Hi 👋, I'm Mahedi Hasan Rafsun</h1>
+<h3 align="center">AI Developer | Web Developer | Cybersecurity Enthusiast | Prompt Engineer</h3>
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+<p align="center">
+  <a href="https://codewithrafsun.vercel.app/" target="_blank">
+    🌐 Visit My Portfolio
+  </a>
+</p>
 
-## How can I edit this code?
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=AI+Automation+Developer;Machine+Learning+Enthusiast;Cybersecurity+Research+Learner;Founder+of+LWMHR;Building+Scalable+Digital+Systems" alt="Typing Animation" />
+</p>
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 About Me
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+I am **Mahedi Hasan Rafsun**, a student and developer from Bangladesh focused on building intelligent, scalable, and secure digital systems.
 
-Changes made via Lovable will be committed automatically to this repo.
+I specialize in:
 
-**Use your preferred IDE**
+- AI-powered web applications  
+- Automation systems  
+- Cybersecurity awareness  
+- Prompt engineering  
+- API-based system architecture  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+I actively build and publish projects under the brand **@CodeWithRafsun** and run an educational initiative:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 📚 LWMHR – Learn With Mahedi Hasan Rafsun
 
-Follow these steps:
+Focused on:
+- AI Tools Education  
+- Development Best Practices  
+- Cybersecurity Awareness  
+- Productivity & Technical Growth  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+My long-term objective is to become a **Professional Machine Learning Engineer and AI Automation Expert**, developing real-world AI systems that solve practical problems at scale.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🧠 Core Competencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- 💻 Full-Stack Web Development  
+- 🤖 AI Tool Development & Automation  
+- 🔐 Cybersecurity Fundamentals  
+- 🧩 Prompt Engineering  
+- 🗄 Database Integration (Supabase, Firebase)  
+- ⚙ API Integration & Backend Logic Design  
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠 Tech Stack
 
-**Use GitHub Codespaces**
+### 👨‍💻 Programming
+- JavaScript  
+- Python  
+- Bash (Linux / Termux)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 🌐 Web & Backend
+- React.js  
+- Vue.js  
+- Node.js  
+- Tailwind CSS  
+- Supabase  
 
-## What technologies are used for this project?
+### 🔐 Security & Tools
+- Linux Environment  
+- Termux  
+- Git & GitHub  
+- REST API Integration  
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📌 Current Focus
 
-## How can I deploy this project?
+- AI-powered SaaS systems  
+- Automation-based productivity tools  
+- Advanced API integration  
+- Machine Learning fundamentals  
+- Secure system design  
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📊 GitHub Analytics
 
-Yes, you can!
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=codewithrafsun&show_icons=true&theme=tokyonight" height="170"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=codewithrafsun&theme=tokyonight" height="170"/>
+</p>
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=codewithrafsun&theme=tokyo-night" />
+</p>
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 🌍 Connect With Me
+
+<p align="center">
+
+<a href="https://codewithrafsun.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white" />
+</a>
+
+<a href="https://www.linkedin.com/in/codewithrafsun" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<a href="https://www.facebook.com/codewithrafsun" target="_blank">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+</a>
+
+<a href="https://www.instagram.com/codewithrafsun" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
+
+<a href="https://t.me/codewithrafsun" target="_blank">
+  <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" />
+</a>
+
+<a href="https://www.tiktok.com/@codewithrafsun" target="_blank">
+  <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" />
+</a>
+
+<a href="https://www.youtube.com/@codewithrafsun" target="_blank">
+  <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+</a>
+
+<a href="https://stackoverflow.com/users/your-id" target="_blank">
+  <img src="https://img.shields.io/badge/StackOverflow-F58025?style=for-the-badge&logo=stackoverflow&logoColor=white" />
+</a>
+
+</p>
+
+---
+
+## 🎯 Vision Statement
+
+To engineer intelligent infrastructure that merges **AI, automation, and security**, enabling scalable and impactful digital ecosystems.
+
+---
+
+<p align="center">
+  ⚡ Build • Secure • Automate • Scale
+</p>
