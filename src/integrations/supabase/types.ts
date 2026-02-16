@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_messages: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      site_settings: {
+        Row: {
+          banner_image_url: string | null
+          id: string
+          profile_image_url: string | null
+          updated_at: string
+        }
+        Insert: {
+          banner_image_url?: string | null
+          id?: string
+          profile_image_url?: string | null
+          updated_at?: string
+        }
+        Update: {
+          banner_image_url?: string | null
+          id?: string
+          profile_image_url?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

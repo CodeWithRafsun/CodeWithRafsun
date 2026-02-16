@@ -312,6 +312,24 @@
     100% { background-position: 200% 0; }
   }
 
+  @keyframes marquee-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-ltr {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-marquee-rtl {
+    animation: marquee-rtl 30s linear infinite;
+  }
+
+  .animate-marquee-ltr {
+    animation: marquee-ltr 35s linear infinite;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
