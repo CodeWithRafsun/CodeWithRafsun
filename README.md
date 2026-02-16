@@ -160,21 +160,22 @@ Currently strengthening:
 Bangladesh  
 
 ### <strong>Email</strong>
-your@email.com  
+codewithrafsun@yahoo.com 
+codewithrafsun@aol.com
 
 </td>
 
 <td width="33%" align="center">
 
 ### <strong>Website</strong>
-https://yourwebsite.com  
+codewithrafsun.vercel.app
 
 </td>
 
 <td width="33%" align="right">
 
 ### <strong>Primary Handle</strong>
-CodeWithRafsun  
+@CodeWithRafsun  
 
 </td>
 </tr>
@@ -259,8 +260,8 @@ CodeWithRafsun
 ## <u>Highlighted Repositories</u>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeWithRafsun&repo=REPOSITORY_NAME_1&hide_border=true" width="45%" />
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeWithRafsun&repo=REPOSITORY_NAME_2&hide_border=true" width="45%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeWithRafsun&repo=lwmhrchatbot_cli&hide_border=true" width="45%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeWithRafsun&repo=termuxsimplified&hide_border=true" width="45%" />
 </p>
 <p align="center">
   <strong>Build Secure Systems. Automate Intelligently. Engineer with Purpose.</strong>
