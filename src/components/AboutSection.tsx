@@ -18,7 +18,7 @@ export const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProfileImage, setCurrentProfileImage] = useState(profileImage);
-  const [currentBannerImage, setCurrentBannerImage] = useState('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80');
+  const [currentBannerImage, setCurrentBannerImage] = useState('Navy Blue Geometric Technology LinkedIn Banner_20260107_141301_0000.png');
   const [isUploading, setIsUploading] = useState(false);
 
   // Load saved images from database
