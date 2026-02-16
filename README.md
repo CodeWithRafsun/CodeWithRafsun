@@ -1,150 +1,267 @@
-<!-- =============================== -->
-<!--        PROFILE HEADER           -->
-<!-- =============================== -->
-
-<h1 align="center">Hi 👋, I'm Mahedi Hasan Rafsun</h1>
-<h3 align="center">AI Developer | Web Developer | Cybersecurity Enthusiast | Prompt Engineer</h3>
+<!-- ===================== HERO SECTION (CENTER) ===================== -->
 
 <p align="center">
-  <a href="https://codewithrafsun.vercel.app/" target="_blank">
-    🌐 Visit My Portfolio
-  </a>
+  <img src="public/Navy Blue Geometric Technology LinkedIn Banner_20260107_141301_0000.png" width="100%" />
+</p>
+
+<h1 align="center"><strong>Mahedi Hasan Rafsun</strong></h1>
+
+<p align="center">
+  <strong>Web Developer | Cyber Security Learner | AI Tool Builder | Prompt Engineer</strong>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=AI+Automation+Developer;Machine+Learning+Enthusiast;Cybersecurity+Research+Learner;Founder+of+LWMHR;Building+Scalable+Digital+Systems" alt="Typing Animation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=0A66C2&center=true&vCenter=true&width=750&lines=Full+Stack+Web+Developer;AI+Automation+Focused;Security+First+Engineering;Future+Machine+Learning+Engineer" />
 </p>
 
 ---
 
-## 🚀 About Me
+# <u>Profile Overview</u>
 
-I am **Mahedi Hasan Rafsun**, a student and developer from Bangladesh focused on building intelligent, scalable, and secure digital systems.
+<table width="100%">
+<tr>
+<td width="50%" align="left">
 
-I specialize in:
+## <u>About Me</u>
 
-- AI-powered web applications  
-- Automation systems  
-- Cybersecurity awareness  
-- Prompt engineering  
-- API-based system architecture  
+<strong>Mahedi Hasan Rafsun</strong> is a technology-driven student from Bangladesh building scalable web systems and AI-powered tools.
 
-I actively build and publish projects under the brand **@CodeWithRafsun** and run an educational initiative:
+Operating under the professional identity:
 
-### 📚 LWMHR – Learn With Mahedi Hasan Rafsun
+<strong>CodeWithRafsun</strong>
 
-Focused on:
-- AI Tools Education  
-- Development Best Practices  
-- Cybersecurity Awareness  
-- Productivity & Technical Growth  
+Founder of:
 
-My long-term objective is to become a **Professional Machine Learning Engineer and AI Automation Expert**, developing real-world AI systems that solve practical problems at scale.
+<strong>LWMHR – Learn With Mahedi Hasan Rafsun</strong>
+
+Focused on structured learning in:
+- Artificial Intelligence tools
+- Web Engineering
+- Cyber Security
+- Developer Productivity Systems
+
+</td>
+
+<td width="50%" align="right">
+
+## <u>Professional Objective</u>
+
+To become a <strong>Machine Learning Engineer</strong> specializing in:
+
+- Intelligent automation systems  
+- AI-driven applications  
+- Secure backend architectures  
+- Scalable full-stack platforms  
+
+Currently strengthening:
+- Backend engineering depth  
+- Security architecture fundamentals  
+- Data-driven system design  
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🧠 Core Competencies
+# <u>Technical Skills</u>
 
-- 💻 Full-Stack Web Development  
-- 🤖 AI Tool Development & Automation  
-- 🔐 Cybersecurity Fundamentals  
-- 🧩 Prompt Engineering  
-- 🗄 Database Integration (Supabase, Firebase)  
-- ⚙ API Integration & Backend Logic Design  
+<table width="100%">
+<tr>
+<td width="33%" align="left">
 
----
+### <strong>Programming</strong>
 
-## 🛠 Tech Stack
-
-### 👨‍💻 Programming
 - JavaScript  
+- TypeScript  
 - Python  
-- Bash (Linux / Termux)
+- Bash  
 
-### 🌐 Web & Backend
+</td>
+
+<td width="33%" align="center">
+
+### <strong>Frontend</strong>
+
+- HTML5  
+- CSS3  
 - React.js  
-- Vue.js  
+- Responsive Design  
+- UI Structuring  
+
+</td>
+
+<td width="33%" align="right">
+
+### <strong>Backend & Database</strong>
+
 - Node.js  
-- Tailwind CSS  
 - Supabase  
+- Firebase  
+- REST APIs  
+- Authentication Systems  
 
-### 🔐 Security & Tools
-- Linux Environment  
-- Termux  
-- Git & GitHub  
-- REST API Integration  
-
----
-
-## 📌 Current Focus
-
-- AI-powered SaaS systems  
-- Automation-based productivity tools  
-- Advanced API integration  
-- Machine Learning fundamentals  
-- Secure system design  
+</td>
+</tr>
+</table>
 
 ---
 
-## 📊 GitHub Analytics
+# <u>Security & AI Focus</u>
+
+<table width="100%">
+<tr>
+<td width="50%" align="left">
+
+### <strong>Cyber Security</strong>
+
+- Web security fundamentals  
+- Authentication hardening  
+- API protection principles  
+- Basic penetration concepts  
+
+</td>
+
+<td width="50%" align="right">
+
+### <strong>AI & Automation</strong>
+
+- Prompt Engineering  
+- AI Workflow Systems  
+- Automation Tools  
+- AI-assisted development  
+
+</td>
+</tr>
+</table>
+
+---
+
+# <u>GitHub Analytics</u>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=codewithrafsun&show_icons=true&theme=tokyonight" height="170"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=codewithrafsun&theme=tokyonight" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=CodeWithRafsun&show_icons=true&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=CodeWithRafsun&hide_border=true" width="48%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=codewithrafsun&theme=tokyo-night" />
-</p>
-
----
-
-## 🌍 Connect With Me
-
-<p align="center">
-
-<a href="https://codewithrafsun.vercel.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white" />
-</a>
-
-<a href="https://www.linkedin.com/in/codewithrafsun" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-
-<a href="https://www.facebook.com/codewithrafsun" target="_blank">
-  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
-</a>
-
-<a href="https://www.instagram.com/codewithrafsun" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-</a>
-
-<a href="https://t.me/codewithrafsun" target="_blank">
-  <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" />
-</a>
-
-<a href="https://www.tiktok.com/@codewithrafsun" target="_blank">
-  <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" />
-</a>
-
-<a href="https://www.youtube.com/@codewithrafsun" target="_blank">
-  <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
-</a>
-
-<a href="https://stackoverflow.com/users/your-id" target="_blank">
-  <img src="https://img.shields.io/badge/StackOverflow-F58025?style=for-the-badge&logo=stackoverflow&logoColor=white" />
-</a>
-
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeWithRafsun&layout=compact&hide_border=true" width="40%" />
 </p>
 
 ---
 
-## 🎯 Vision Statement
+# <u>Contact & Network</u>
 
-To engineer intelligent infrastructure that merges **AI, automation, and security**, enabling scalable and impactful digital ecosystems.
+<table width="100%">
+<tr>
+<td width="33%" align="left">
+
+### <strong>Location</strong>
+Bangladesh  
+
+### <strong>Email</strong>
+your@email.com  
+
+</td>
+
+<td width="33%" align="center">
+
+### <strong>Website</strong>
+https://yourwebsite.com  
+
+</td>
+
+<td width="33%" align="right">
+
+### <strong>Primary Handle</strong>
+CodeWithRafsun  
+
+</td>
+</tr>
+</table>
 
 ---
 
+# <u>Connect</u>
+
 <p align="center">
-  ⚡ Build • Secure • Automate • Scale
+
+<a href="https://github.com/CodeWithRafsun">
+  <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://linkedin.com/in/codewithrafsun">
+  <img src="https://img.shields.io/badge/LinkedIn-Network-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://facebook.com/CodeWithRafsun">
+  <img src="https://img.shields.io/badge/Facebook-Profile-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/>
+</a>
+
+<a href="https://youtube.com/@CodeWithRafsun">
+  <img src="https://img.shields.io/badge/YouTube-Channel-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/>
+</a>
+
+<a href="https://instagram.com/CodeWithRafsun">
+  <img src="https://img.shields.io/badge/Instagram-Profile-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+</a>
+
+<a href="https://t.me/CodeWithRafsun">
+  <img src="https://img.shields.io/badge/Telegram-Community-26A5E4?style=for-the-badge&logo=telegram&logoColor=white"/>
+</a>
+
+</p>
+
+---
+<!-- ===================== GITHUB PERFORMANCE SECTION ===================== -->
+
+# <u>GitHub Performance</u>
+
+<p align="center">
+
+  <img src="https://komarev.com/ghpvc/?username=CodeWithRafsun&label=Profile%20Views&color=0A66C2&style=flat" />
+
+  <img src="https://img.shields.io/github/followers/CodeWithRafsun?label=Followers&style=flat" />
+
+  <img src="https://img.shields.io/github/stars/CodeWithRafsun?affiliations=OWNER%2CCOLLABORATOR&label=Total%20Stars&style=flat" />
+
+  <img src="https://img.shields.io/github/repos/CodeWithRafsun?label=Total%20Repositories&style=flat" />
+
+</p>
+
+---
+
+## <u>Statistics Overview</u>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=CodeWithRafsun&show_icons=true&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=CodeWithRafsun&hide_border=true" width="48%" />
+</p>
+
+---
+
+## <u>Top Languages</u>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeWithRafsun&layout=compact&hide_border=true" width="40%" />
+</p>
+
+---
+
+## <u>Contribution Graph</u>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=CodeWithRafsun&hide_border=true" width="95%"/>
+</p>
+
+---
+
+## <u>Highlighted Repositories</u>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeWithRafsun&repo=REPOSITORY_NAME_1&hide_border=true" width="45%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeWithRafsun&repo=REPOSITORY_NAME_2&hide_border=true" width="45%" />
+</p>
+<p align="center">
+  <strong>Build Secure Systems. Automate Intelligently. Engineer with Purpose.</strong>
 </p>
